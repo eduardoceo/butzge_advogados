@@ -5,4 +5,5 @@
 ::file-selector-button {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth; /* Ativa o scroll suave em toda a página */
 }
