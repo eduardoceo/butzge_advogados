@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+     
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+      <style>
+        /* Efeitos dourados */
+        .gold-text {
+          background: linear-gradient(to right, #d4af37, #f9d423);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+        .gold-border {
+          border: 2px solid transparent;
+          border-image: linear-gradient(to right, #d4af37, #f9d423);
+          border-image-slice: 1;
+        }
+        .gold-bg {
+          background: linear-gradient(135deg, #d4af37 0%, #f9d423 100%);
+        }
+      </style>
+    </head>
+    <body class="font-sans bg-gray-900 text-gray-100">
+      <!-- Cabeçalho -->
+      <header class="bg-gray-800 shadow-lg">
+        <nav
+          class="container mx-auto flex justify-between items-center py-4 px-6"
+        >
+          <a href="/" class="text-3xl font-bold gold-text">Butzge</a>
+
+          <div class="hidden md:flex items-center gap-8">
+            <ul class="flex gap-8">
+              <li>
+                <a href="#inicio" class="hover:text-yellow-400 transition"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a href="#sobre" class="hover:text-yellow-400 transition"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a href="#areas" class="hover:text-yellow-400 transition"
+                  >Áreas de Atuação</a
+                >
+              </li>
+              <li>
+                <a href="#contato" class="hover:text-yellow-400 transition"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="gold-bg hover:bg-gradient-to-r from-yellow-600 to-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-medium transition transform hover:scale-105 shadow-lg"
+            >
+              <i class="fab fa-whatsapp mr-2"></i> Agende pelo WhatsApp
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="md:hidden text-gray-300 hover:text-yellow-400">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Seção Hero -->
+  <section
+  id="inicio"
+  class="bg-gradient-to-b from-gray-900 to-gray-800 py-36 flex items-center relative overflow-hidden"
+>
+  <!-- Elementos decorativos de fundo -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 right-0 w-72 h-72 bg-yellow-500 rounded-full blur-3xl opacity-20"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-yellow-400 rounded-full blur-3xl opacity-20"></div>
+  </div>
+
+  <!-- Conteúdo centralizado -->
+  <div class="relative container mx-auto px-6 text-center max-w-3xl">
+    <h1 class="text-3xl md:text-5xl font-bold leading-snug mb-6 text-white">
+      Advocacia com <span class="gold-text">Clareza</span>,
+      <span class="gold-text">Firmeza</span> e
+      <span class="gold-text">Cuidado</span>
+    </h1>
+    <p class="text-lg md:text-xl mb-8 text-gray-300 leading-relaxed">
+      Direito de Família, Sucessões e Empresarial com atendimento humanizado e soluções práticas.
+    </p>
+    <div class="mb-8 flex items-center justify-center text-gray-400 text-base">
+      <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
+      Atendimento em Joinville-SC | Online para todo Brasil e Exterior
+    </div>
+    <a
+      href="#"
+      class="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-8 py-3 rounded-lg text-base font-semibold transition transform hover:scale-105 shadow-md"
+    >
+      <i class="fab fa-whatsapp mr-2"></i>Agendar Atendimento
+    </a>
+  </div>
+</section>
+
+
+
+      <!-- Sobre a Dra. Raissa -->
+      <section id="sobre" class="py-24 bg-gray-800">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <!-- Imagem -->
+      <div class="md:w-1/3 max-w-xs mx-auto">
+        <div class="gold-border rounded-xl overflow-hidden shadow-2xl">
+          <img src="Imagens/Raissa.JPG" alt="Dra. Raissa Butzge" class="w-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="md:w-2/3">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+          Sobre a <span class="gold-text">Dra. Raissa Butzge</span>
+        </h2>
+        <p class="text-lg md:text-xl mb-6 text-gray-300 leading-relaxed">
+          Com OAB-SC nº 58.793 e atuação desde 2017, sou advogada especializada em Direito de Família, Planejamento Patrimonial e Direito Empresarial.
+        </p>
+        <p class="text-lg md:text-xl mb-8 text-gray-300 leading-relaxed">
+          Atendo pessoas e empresas com orientação prática, acolhimento e visão estratégica. Se você precisa de um atendimento claro e confiável, estou à disposição para ouvir seu caso.
+        </p>
+        <a
+          href="https://linkedin.com/in/raissabutzge"
+          target="_blank"
+          class="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition text-lg"
+        >
+          <i class="fab fa-linkedin mr-2 text-2xl"></i>
+          Ver currículo completo no LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Áreas de Atuação -->
+      <section id="areas" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-12 text-center gold-text">
+            Áreas de Atuação
+          </h2>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cartão Família -->
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-yellow-500 border border-gray-700"
+            >
+              <div class="text-4xl mb-4 gold-text">
+                <i class="fas fa-home"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white">
+                Família e Sucessões
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Divórcios consensuais e litigiosos</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Guarda de filhos e visitas</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Pensão alimentícia</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Holdings familiares e testamentos</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cartão Empresarial -->
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-yellow-500 border border-gray-700"
+            >
+              <div class="text-4xl mb-4 gold-text">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white">
+                Empresarial e Societário
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Consultoria mensal preventiva</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Contratos empresariais</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Audiências</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Constituição de empresas</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Recuperação de crédito</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cartão Compliance -->
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-yellow-500 border border-gray-700"
+            >
+              <div class="text-4xl mb-4 gold-text">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white">
+                Compliance e Fundos Privados
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Assessoria jurídica para o setor financeiro</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                  <span>Gestão de riscos e conformidade</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cartão Parcerias -->
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition hover:border-yellow-500 border border-gray-700 md:col-span-2 lg:col-span-1"
+            >
+              <div class="text-4xl mb-4 gold-text">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 text-white">
+                Parcerias jurídicas
+              </h3>
+              <p class="mb-4 text-gray-300">
+                Atuação integrada com advogados especializados em:
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm"
+                  >Direito Imobiliário</span
+                >
+                <span
+                  class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm"
+                  >Trabalhista</span
+                >
+                <span
+                  class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm"
+                  >Tributário</span
+                >
+                <span
+                  class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm"
+                  >Criminal</span
+                >
+                <span
+                  class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm"
+                  >Militar</span
+                >
+                <span
+                  class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm"
+                  >Ambiental</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Depoimentos -->
+      <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-12 text-center gold-text">
+            Depoimentos de Clientes
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-yellow-500"
+            >
+              <div class="flex items-center mb-4">
+                <i class="fas fa-quote-left text-yellow-500 mr-2"></i>
+                <p class="font-medium italic text-gray-200">
+                  "A Dra. Raissa me acolheu no trâmite do meu divórcio. Tudo foi
+                  conduzido com profissionalismo e humanidade."
+                </p>
+              </div>
+              <p class="font-semibold text-yellow-400">— D.W., empresário</p>
+            </div>
+
+            <div
+              class="bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-yellow-500"
+            >
+              <div class="flex items-center mb-4">
+                <i class="fas fa-quote-left text-yellow-500 mr-2"></i>
+                <p class="font-medium italic text-gray-200">
+                  "Atendimento excepcional na constituição da minha empresa.
+                  Explicações claras e processo ágil."
+                </p>
+              </div>
+              <p class="font-semibold text-yellow-400">— M.S., empreendedora</p>
+            </div>
+
+            <div
+              class="bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-yellow-500"
+            >
+              <div class="flex items-center mb-4">
+                <i class="fas fa-quote-left text-yellow-500 mr-2"></i>
+                <p class="font-medium italic text-gray-200">
+                  "Resolveu meu caso de pensão alimentícia com eficiência e
+                  sensibilidade. Recomendo!"
+                </p>
+              </div>
+              <p class="font-semibold text-yellow-400">— A.L., designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Onde Atendo -->
+      <section id="contato" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2">
+              <h2 class="text-3xl font-bold mb-6 gold-text">Onde Atendo</h2>
+              <p class="mb-6 text-lg text-gray-300">
+                Atendimentos presenciais no Edifício Helbor Dual, 14º andar —
+                Joinville-SC
+              </p>
+              <p class="mb-8 flex items-center text-gray-300">
+                <i
+                  class="fas fa-map-marker-alt text-yellow-500 mr-3 text-xl"
+                ></i>
+                <span>Rua Expedicionário Holz, 550, sala 1403</span>
+              </p>
+              <p class="flex items-center text-gray-300">
+                <i class="fas fa-laptop text-yellow-500 mr-3 text-xl"></i>
+                <span>Atendimentos online também disponíveis!</span>
+              </p>
+            </div>
+            <div class="md:w-1/2">
+              <!-- Mapa Google -->
+              <div
+                class="h-96 bg-gray-800 rounded-lg overflow-hidden shadow-xl"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.8081178782973!2d-48.85604392376355!3d-26.300319767896998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb0391fa17849%3A0xe2e812451917aceb!2sEdif%C3%ADcio%20Helbor%20Dual%20%7C%20Offices%20%26%20Corporate!5e0!3m2!1spt-BR!2sbr!4v1751930880642!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  class="opacity-90 hover:opacity-100 transition"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <section
+        class="py-16 bg-gradient-to-r from-gray-900 to-gray-800 text-center relative overflow-hidden"
+      >
+        <div class="absolute inset-0 opacity-10">
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-yellow-500 rounded-full filter blur-3xl opacity-20"
+          ></div>
+        </div>
+        <div class="container mx-auto px-6 relative">
+          <h2 class="text-3xl font-bold mb-6 text-white">
+            Pronta para esclarecer suas dúvidas com um atendimento jurídico
+            sério, claro e acolhedor?
+          </h2>
+          <p class="text-xl mb-8 text-gray-300">
+            Clique no botão abaixo e fale comigo agora pelo WhatsApp:
+          </p>
+          <a
+            href="#"
+            class="inline-block gold-bg hover:bg-gradient-to-r from-yellow-600 to-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition transform hover:scale-105 shadow-xl"
+          >
+            <i class="fab fa-whatsapp mr-2"></i>Falar com a Dra. Raissa
+          </a>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row justify-between items-start mb-8"
+          >
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-xl font-bold gold-text mb-2">
+                Butzge Advogados Associados
+              </h3>
+              <p class="text-gray-500">OAB-SC 58.793</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div>
+                <h4 class="text-gray-400 font-semibold mb-3">Contato</h4>
+                <ul class="space-y-2 text-gray-500">
+                  <li class="flex items-center">
+                    <i class="fas fa-phone-alt mr-2 text-yellow-500"></i>
+                    (47) XXXX-XXXX
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-envelope mr-2 text-yellow-500"></i>
+                    raissa58792@oab-sc.org.br
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-gray-400 font-semibold mb-3">Redes Sociais</h4>
+                <div class="flex space-x-4 text-xl">
+                  <a
+                    href="#"
+                    class="text-gray-500 hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-500 hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-500 hover:text-yellow-500 transition"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="border-t border-gray-800 pt-6 text-center text-gray-600 text-sm"
+          >
+            <p>© 2023 Butzge Advogados. Todos os direitos reservados.</p>
+            <div class="mt-2 flex justify-center space-x-4">
+              <a href="#" class="hover:text-yellow-500 transition"
+                >Política de privacidade</a
+              >
+              <a href="#" class="hover:text-yellow-500 transition"
+                >Termos de uso</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>
+</html>
