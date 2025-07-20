@@ -1,664 +1,810 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Butzge Advogados</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <style>
-      /* Transições suaves */
-      .transition-all {
-        transition: all 0.3s ease;
-      }
-      .hover-scale {
-        transition: transform 0.3s ease;
-      }
-      .hover-scale:hover {
-        transform: scale(1.03);
-      }
-      .opacity-transition {
-        transition: opacity 0.3s ease;
-      }
-      /* Efeitos de hover */
-      .hover-underline {
-        position: relative;
-      }
-      .hover-underline:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -2px;
-        left: 0;
-        background-color: #000;
-        transition: width 0.3s ease;
-      }
-      .hover-underline:hover:after {
-        width: 100%;
-      }
-      /* Sombra suave */
-      .soft-shadow {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      }
-      .soft-shadow-hover {
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-      }
 
-      /* Scrollbar personalizada */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-    </style>
-  </head>
-  <body class="font-sans bg-white text-gray-800 scroll-smooth">
-    <!-- Cabeçalho -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-      <nav
-        class="container mx-auto flex justify-between items-center py-4 px-6"
-      >
-        <a href="/" class="text-3xl font-bold text-black">Butzge</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butzge Advogados</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Transições suaves */
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.03);
+    }
+
+    .opacity-transition {
+      transition: opacity 0.3s ease;
+    }
+
+    /* Efeitos de hover */
+    .hover-underline {
+      position: relative;
+    }
+
+    .hover-underline:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    .hover-underline:hover:after {
+      width: 100%;
+    }
+
+    /* Sombra suave */
+    .soft-shadow {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .soft-shadow-hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-white text-gray-800 scroll-smooth">
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <a href="#" class="flex items-center">
+        <img src="Imagens/logo.png" alt="Butzge Advogados" class="h-12" width="190" height="48">
 
         <div class="hidden md:flex items-center gap-8">
           <ul class="flex gap-8">
             <li>
-              <a
-                href="#inicio"
-                class="hover-underline transition-all font-medium"
-                >Início</a
-              >
+              <a href="#inicio" class="hover-underline transition-all font-medium">Início</a>
             </li>
             <li>
-              <a
-                href="#sobre"
-                class="hover-underline transition-all font-medium"
-                >Sobre</a
-              >
+              <a href="#sobre" class="hover-underline transition-all font-medium">Sobre</a>
             </li>
             <li>
-              <a
-                href="#areas"
-                class="hover-underline transition-all font-medium"
-                >Áreas de Atuação</a
-              >
+              <a href="#areas" class="hover-underline transition-all font-medium">Áreas de Atuação</a>
             </li>
             <li>
-              <a
-                href="#contato"
-                class="hover-underline transition-all font-medium"
-                >Contato</a
-              >
+              <a href="#contato" class="hover-underline transition-all font-medium">Contato</a>
             </li>
           </ul>
-          <a
-            href="#"
-            class="bg-black hover:bg-gray-800 text-white px-5 py-2 rounded-lg font-medium transition-all hover-scale"
-          >
+          <a href="#"
+            class="bg-black hover:bg-gray-800 text-white px-5 py-2 rounded-lg font-medium transition-all hover-scale">
             <i class="fab fa-whatsapp mr-2"></i> Agende pelo WhatsApp
           </a>
         </div>
 
         <!-- Botão para abrir o menu -->
         <!-- Botão para abrir o menu -->
-        <button
-          id="menuCelular"
-          class="md:hidden text-gray-800 hover:text-gray-600 transition-all p-4"
-        >
+        <button id="menuCelular" class="md:hidden text-gray-800 hover:text-gray-600 transition-all p-4">
           <i class="fas fa-bars text-2xl"></i>
         </button>
 
         <!-- Menu lateral (inicialmente escondido à esquerda) -->
-        <nav
-          id="menuMobile"
-          class="fixed top-0 right-0 w-64 h-screen bg-white p-6 space-y-4 transform translate-x-full transition-transform duration-300 z-50 md:hidden shadow-lg"
-        >
-          <button
-            id="fecharMenu"
-            class="text-right w-full text-gray-600 hover:text-red-500 text-xl"
-          >
+        <nav id="menuMobile"
+          class="fixed top-0 right-0 w-64 h-screen bg-white p-6 space-y-4 transform translate-x-full transition-transform duration-300 z-50 md:hidden shadow-lg">
+          <button id="fecharMenu" class="text-right w-full text-gray-600 hover:text-red-500 text-xl">
             &times;
           </button>
-          <a href="#inicio" class="block text-gray-800 hover:text-blue-500"
-            >Início</a
-          >
-          <a href="#sobre" class="block text-gray-800 hover:text-blue-500"
-            >Sobre</a
-          >
-          <a href="#areas" class="block text-gray-800 hover:text-blue-500"
-            >Áreas de Atuação</a
-          >
-          <a href="#contato" class="block text-gray-800 hover:text-blue-500"
-            >Contato</a
-          >
+          <a href="#inicio" class="block text-gray-800 hover:text-blue-500">Início</a>
+          <a href="#sobre" class="block text-gray-800 hover:text-blue-500">Sobre</a>
+          <a href="#areas" class="block text-gray-800 hover:text-blue-500">Áreas de Atuação</a>
+          <a href="#contato" class="block text-gray-800 hover:text-blue-500">Contato</a>
         </nav>
-      </nav>
-    </header>
+    </nav>
+  </header>
 
-    <!-- Seção Hero -->
-    <section
-      id="inicio"
-      class="bg-gradient-to-b from-white to-gray-100 py-36 flex items-center relative overflow-hidden"
-      data-aos="fade-in"
-    >
-      <!-- Elementos decorativos de fundo -->
-      <div class="absolute inset-0 opacity-5">
-        <div
-          class="absolute top-0 right-0 w-72 h-72 bg-gray-300 rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-0 left-0 w-72 h-72 bg-gray-200 rounded-full blur-3xl"
-        ></div>
+ <!-- Seção Hero - Tema Preto e Branco -->
+<section id="inicio" class="min-h-[80vh] flex items-center relative overflow-hidden bg-white">
+  <!-- Fundo com padrão geométrico sutil -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zMCAxMGgxMHY0MEgzMFYxMHptLTIwIDBoMTB2NDBIMTBWMTB6TTMwIDBoMTB2MTBIMzBWMHptLTIwIDBoMTB2MTBIMTBWMHoiIGZpbGw9IiMwMDAiIG9wYWNpdHk9Ii4wMiIvPjwvZz48L3N2Zz4=')]"></div>
+  </div>
+
+  <!-- Elementos decorativos abstratos -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -right-40 -top-40 w-80 h-80 border-2 border-black rounded-full opacity-5"></div>
+    <div class="absolute -left-40 -bottom-40 w-80 h-80 border-2 border-black rounded-full opacity-5"></div>
+  </div>
+
+  <!-- Conteúdo (texto mantido exatamente como enviado) -->
+  <div class="relative container mx-auto px-6 text-center max-w-3xl">
+    <div class="mb-12">
+      <!-- Logo (ajuste o tamanho conforme necessário) -->
+      <img src="imagens/logo.png" alt="Butzge Advogados" class="mx-auto h-16 mb-8">
+      
+      <h1 class="text-3xl md:text-5xl font-bold leading-snug mb-6 text-black" data-aos="fade-up" data-aos-delay="100">
+        Advocacia com <span class="text-gray-600">Clareza</span>,
+        <span class="text-gray-600">Confiança</span> e
+        <span class="text-gray-600">Excelência</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-8 text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        Direito de Família, Sucessões e Empresarial com atendimento
+        personalizado e soluções estratégicas.
+      </p>
+      <div class="mb-8 flex items-center justify-center text-gray-500 text-base" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-map-marker-alt text-gray-800 mr-2"></i>
+        Atendimento em Joinville-SC | Online para todo Brasil e Exterior
       </div>
+    </div>
 
-      <!-- Conteúdo centralizado -->
-      <div class="relative container mx-auto px-6 text-center max-w-3xl">
-        <h1
-          class="text-3xl md:text-5xl font-bold leading-snug mb-6 text-black"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Advocacia com <span class="text-gray-600">Clareza</span>,
-          <span class="text-gray-600">Firmeza</span> e
-          <span class="text-gray-600">Excelência</span>
-        </h1>
-        <p
-          class="text-lg md:text-xl mb-8 text-gray-600 leading-relaxed"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          Direito de Família, Sucessões e Empresarial com atendimento
-          personalizado e soluções estratégicas.
-        </p>
-        <div
-          class="mb-8 flex items-center justify-center text-gray-500 text-base"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <i class="fas fa-map-marker-alt text-gray-800 mr-2"></i>
-          Atendimento em Joinville-SC | Online para todo Brasil e Exterior
+    <!-- Botão com destaque discreto -->
+    <a href="#" class="inline-block bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-none text-base font-medium tracking-wider uppercase transition-all duration-300 hover:translate-y-[-2px]" data-aos="fade-up" data-aos-delay="400">
+      <i class="fab fa-whatsapp mr-2"></i>Agendar Atendimento
+    </a>
+
+    <!-- Divisor estilizado -->
+    <div class="mt-16 mx-auto w-20 h-px bg-gray-300" data-aos="fade-in" data-aos-delay="500"></div>
+  </div>
+
+  <!-- Indicador de scroll -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <i class="fas fa-chevron-down text-gray-400"></i>
+  </div>
+</section>
+
+  <!-- Sobre a Dra. Raissa -->
+  <section id="sobre" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <!-- Imagem -->
+        <div class="md:w-1/3 max-w-xs mx-auto" data-aos="fade-right">
+          <div class="border-2 border-gray-200 rounded-xl overflow-hidden shadow-lg hover-scale">
+            <img src="Imagens/Raissa.JPG" alt="Dra. Raissa Butzge" class="w-full object-cover" />
+          </div>
         </div>
-        <a
-          href="#"
-          class="inline-block bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-lg text-base font-semibold transition-all hover-scale soft-shadow"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <i class="fab fa-whatsapp mr-2"></i>Agendar Atendimento
+
+        <!-- Texto -->
+        <div class="md:w-2/3" data-aos="fade-left" data-aos-delay="200">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
+            Sobre a <span class="text-gray-700">Dra. Raissa Butzge</span>
+          </h2>
+          <p class="text-lg md:text-xl mb-6 text-gray-600 leading-relaxed">
+            Com OAB-SC nº 58.793 e atuação desde 2017, sou advogada
+            especializada em Direito de Família, Planejamento Patrimonial e
+            Direito Empresarial.
+          </p>
+          <p class="text-lg md:text-xl mb-8 text-gray-600 leading-relaxed">
+            Atendo pessoas e empresas com orientação prática, profissionalismo
+            e visão estratégica. Se você precisa de um atendimento claro e
+            confiável, estou à disposição para analisar seu caso.
+          </p>
+          <a href="https://linkedin.com/in/raissabutzge" target="_blank"
+            class="inline-flex items-center text-gray-800 hover:text-black transition-all font-medium"
+            data-aos="fade-up" data-aos-delay="300">
+            <i class="fab fa-linkedin mr-2 text-xl"></i>
+            Ver currículo completo no LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Áreas de Atuação -->
+  <section id="areas" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center text-black" data-aos="fade-up">
+        Áreas de Atuação
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cartão Família -->
+        <div
+          class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-4 text-gray-800">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-black">
+            Família e Sucessões
+          </h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Divórcios consensuais e litigiosos</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Guarda de filhos e visitas</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Pensão alimentícia</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Holdings familiares e testamentos</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cartão Empresarial -->
+        <div
+          class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4 text-gray-800">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-black">
+            Empresarial e Societário
+          </h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Consultoria mensal preventiva</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Contratos empresariais</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Audiências</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Constituição de empresas</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Recuperação de crédito</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cartão Compliance -->
+        <div
+          class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-4 text-gray-800">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-black">
+            Compliance e Fundos Privados
+          </h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Assessoria jurídica para o setor financeiro</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
+              <span>Gestão de riscos e conformidade</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cartão Parcerias -->
+        <div
+          class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100 md:col-span-2 lg:col-span-1"
+          data-aos="fade-up" data-aos-delay="400">
+          <div class="text-4xl mb-4 text-gray-800">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-black">
+            Parcerias jurídicas
+          </h3>
+          <p class="mb-4 text-gray-600">
+            Atuação integrada com advogados especializados em:
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Direito Imobiliário</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Trabalhista</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Tributário</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Criminal</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Militar</span>
+            <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm">Ambiental</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center text-black" data-aos="fade-up">
+        Depoimentos de Clientes
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg soft-shadow hover-scale transition-all border-l-4 border-gray-800"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-quote-left text-gray-800 mr-2"></i>
+            <p class="font-medium italic text-gray-700">
+              "A Dra. Raissa me acolheu no trâmite do meu divórcio. Tudo foi
+              conduzido com profissionalismo e discrição."
+            </p>
+          </div>
+          <p class="font-semibold text-gray-800">— D.W., empresário</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg soft-shadow hover-scale transition-all border-l-4 border-gray-800"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-quote-left text-gray-800 mr-2"></i>
+            <p class="font-medium italic text-gray-700">
+              "Atendimento excepcional na constituição da minha empresa.
+              Explicações claras e processo ágil."
+            </p>
+          </div>
+          <p class="font-semibold text-gray-800">— M.S., empreendedora</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg soft-shadow hover-scale transition-all border-l-4 border-gray-800"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-quote-left text-gray-800 mr-2"></i>
+            <p class="font-medium italic text-gray-700">
+              "Resolveu meu caso de pensão alimentícia com eficiência e
+              discrição. Recomendo!"
+            </p>
+          </div>
+          <p class="font-semibold text-gray-800">— A.L., designer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Onde Atendo -->
+  <section id="contato" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <h2 class="text-3xl font-bold mb-6 text-black">Onde Atendo</h2>
+          <p class="mb-6 text-lg text-gray-600">
+            Atendimentos presenciais no Edifício Helbor Dual, 14º andar —
+            Joinville-SC
+          </p>
+          <p class="mb-8 flex items-center text-gray-600">
+            <i class="fas fa-map-marker-alt text-gray-800 mr-3 text-xl"></i>
+            <span>Rua Expedicionário Holz, 550, sala 1403</span>
+          </p>
+          <p class="flex items-center text-gray-600">
+            <i class="fas fa-laptop text-gray-800 mr-3 text-xl"></i>
+            <span>Atendimentos online também disponíveis</span>
+          </p>
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="200">
+          <!-- Mapa Google -->
+          <div class="h-96 bg-gray-100 rounded-lg overflow-hidden soft-shadow hover-scale transition-all">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.8081178782973!2d-48.85604392376355!3d-26.300319767896998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb0391fa17849%3A0xe2e812451917aceb!2sEdif%C3%ADcio%20Helbor%20Dual%20%7C%20Offices%20%26%20Corporate!5e0!3m2!1spt-BR!2sbr!4v1751930880642!5m2!1spt-BR!2sbr"
+              width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+              class="opacity-transition hover:opacity-90"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-16 bg-gray-800 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-gray-600 rounded-full filter blur-3xl"></div>
+    </div>
+    <div class="container mx-auto px-6 relative">
+      <h2 class="text-3xl font-bold mb-6 text-white" data-aos="fade-up">
+        Pronta para esclarecer suas dúvidas com um atendimento jurídico
+        profissional e personalizado?
+      </h2>
+      <p class="text-xl mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="100">
+        Entre em contato agora mesmo:
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="#"
+          class="bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover-scale soft-shadow">
+          <i class="fab fa-whatsapp mr-2"></i>Falar pelo WhatsApp
+        </a>
+        <a href="#"
+          class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover-scale soft-shadow">
+          <i class="fas fa-phone mr-2"></i>Ligar agora
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Sobre a Dra. Raissa -->
-    <section id="sobre" class="py-24 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-          <!-- Imagem -->
-          <div class="md:w-1/3 max-w-xs mx-auto" data-aos="fade-right">
-            <div
-              class="border-2 border-gray-200 rounded-xl overflow-hidden shadow-lg hover-scale"
-            >
-              <img
-                src="Imagens/Raissa.JPG"
-                alt="Dra. Raissa Butzge"
-                class="w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <!-- Texto -->
-          <div class="md:w-2/3" data-aos="fade-left" data-aos-delay="200">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">
-              Sobre a <span class="text-gray-700">Dra. Raissa Butzge</span>
-            </h2>
-            <p class="text-lg md:text-xl mb-6 text-gray-600 leading-relaxed">
-              Com OAB-SC nº 58.793 e atuação desde 2017, sou advogada
-              especializada em Direito de Família, Planejamento Patrimonial e
-              Direito Empresarial.
-            </p>
-            <p class="text-lg md:text-xl mb-8 text-gray-600 leading-relaxed">
-              Atendo pessoas e empresas com orientação prática, profissionalismo
-              e visão estratégica. Se você precisa de um atendimento claro e
-              confiável, estou à disposição para analisar seu caso.
-            </p>
-            <a
-              href="https://linkedin.com/in/raissabutzge"
-              target="_blank"
-              class="inline-flex items-center text-gray-800 hover:text-black transition-all font-medium"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <i class="fab fa-linkedin mr-2 text-xl"></i>
-              Ver currículo completo no LinkedIn
-            </a>
-          </div>
+  <!-- Rodapé -->
+  <footer class="bg-black py-12 text-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-8">
+        <div class="mb-6 md:mb-0" data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-2">Butzge Advogados Associados</h3>
+          <p class="text-gray-400">OAB-SC 58.793</p>
         </div>
-      </div>
-    </section>
 
-    <!-- Áreas de Atuação -->
-    <section id="areas" class="py-16 bg-white">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl font-bold mb-12 text-center text-black"
-          data-aos="fade-up"
-        >
-          Áreas de Atuação
-        </h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Cartão Família -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="text-4xl mb-4 text-gray-800">
-              <i class="fas fa-home"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-black">
-              Família e Sucessões
-            </h3>
-            <ul class="space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Divórcios consensuais e litigiosos</span>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-gray-300 font-semibold mb-3">Contato</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt mr-2 text-gray-300"></i>
+                (47) XXXX-XXXX
               </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Guarda de filhos e visitas</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Pensão alimentícia</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Holdings familiares e testamentos</span>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-2 text-gray-300"></i>
+                raissa58793@oab-sc.org.br
               </li>
             </ul>
           </div>
 
-          <!-- Cartão Empresarial -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="text-4xl mb-4 text-gray-800">
-              <i class="fas fa-building"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-black">
-              Empresarial e Societário
-            </h3>
-            <ul class="space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Consultoria mensal preventiva</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Contratos empresariais</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Audiências</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Constituição de empresas</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Recuperação de crédito</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Cartão Compliance -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="text-4xl mb-4 text-gray-800">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-black">
-              Compliance e Fundos Privados
-            </h3>
-            <ul class="space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Assessoria jurídica para o setor financeiro</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check text-gray-800 mt-1 mr-2"></i>
-                <span>Gestão de riscos e conformidade</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Cartão Parcerias -->
-          <div
-            class="bg-gray-50 p-6 rounded-lg soft-shadow hover-scale hover:soft-shadow-hover transition-all border border-gray-100 md:col-span-2 lg:col-span-1"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="text-4xl mb-4 text-gray-800">
-              <i class="fas fa-handshake"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-black">
-              Parcerias jurídicas
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Atuação integrada com advogados especializados em:
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-                >Direito Imobiliário</span
-              >
-              <span
-                class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-                >Trabalhista</span
-              >
-              <span
-                class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-                >Tributário</span
-              >
-              <span
-                class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-                >Criminal</span
-              >
-              <span
-                class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-                >Militar</span
-              >
-              <span
-                class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-                >Ambiental</span
-              >
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h4 class="text-gray-300 font-semibold mb-3">Redes Sociais</h4>
+            <div class="flex space-x-4 text-xl">
+              <a href="#" class="text-gray-400 hover:text-white transition-all">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://linkedin.com/in/raissabutzge" class="text-gray-400 hover:text-white transition-all">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-all">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Depoimentos -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <h2
-          class="text-3xl font-bold mb-12 text-center text-black"
-          data-aos="fade-up"
-        >
-          Depoimentos de Clientes
-        </h2>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="bg-white p-6 rounded-lg soft-shadow hover-scale transition-all border-l-4 border-gray-800"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-quote-left text-gray-800 mr-2"></i>
-              <p class="font-medium italic text-gray-700">
-                "A Dra. Raissa me acolheu no trâmite do meu divórcio. Tudo foi
-                conduzido com profissionalismo e discrição."
-              </p>
-            </div>
-            <p class="font-semibold text-gray-800">— D.W., empresário</p>
-          </div>
-
-          <div
-            class="bg-white p-6 rounded-lg soft-shadow hover-scale transition-all border-l-4 border-gray-800"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-quote-left text-gray-800 mr-2"></i>
-              <p class="font-medium italic text-gray-700">
-                "Atendimento excepcional na constituição da minha empresa.
-                Explicações claras e processo ágil."
-              </p>
-            </div>
-            <p class="font-semibold text-gray-800">— M.S., empreendedora</p>
-          </div>
-
-          <div
-            class="bg-white p-6 rounded-lg soft-shadow hover-scale transition-all border-l-4 border-gray-800"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="flex items-center mb-4">
-              <i class="fas fa-quote-left text-gray-800 mr-2"></i>
-              <p class="font-medium italic text-gray-700">
-                "Resolveu meu caso de pensão alimentícia com eficiência e
-                discrição. Recomendo!"
-              </p>
-            </div>
-            <p class="font-semibold text-gray-800">— A.L., designer</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Onde Atendo -->
-    <section id="contato" class="py-16 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row gap-12">
-          <div class="md:w-1/2" data-aos="fade-right">
-            <h2 class="text-3xl font-bold mb-6 text-black">Onde Atendo</h2>
-            <p class="mb-6 text-lg text-gray-600">
-              Atendimentos presenciais no Edifício Helbor Dual, 14º andar —
-              Joinville-SC
-            </p>
-            <p class="mb-8 flex items-center text-gray-600">
-              <i class="fas fa-map-marker-alt text-gray-800 mr-3 text-xl"></i>
-              <span>Rua Expedicionário Holz, 550, sala 1403</span>
-            </p>
-            <p class="flex items-center text-gray-600">
-              <i class="fas fa-laptop text-gray-800 mr-3 text-xl"></i>
-              <span>Atendimentos online também disponíveis</span>
-            </p>
-          </div>
-          <div class="md:w-1/2" data-aos="fade-left" data-aos-delay="200">
-            <!-- Mapa Google -->
-            <div
-              class="h-96 bg-gray-100 rounded-lg overflow-hidden soft-shadow hover-scale transition-all"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.8081178782973!2d-48.85604392376355!3d-26.300319767896998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb0391fa17849%3A0xe2e812451917aceb!2sEdif%C3%ADcio%20Helbor%20Dual%20%7C%20Offices%20%26%20Corporate!5e0!3m2!1spt-BR!2sbr!4v1751930880642!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                class="opacity-transition hover:opacity-90"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section class="py-16 bg-gray-800 text-center relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div
-          class="absolute top-0 right-0 w-64 h-64 bg-gray-600 rounded-full filter blur-3xl"
-        ></div>
-      </div>
-      <div class="container mx-auto px-6 relative">
-        <h2 class="text-3xl font-bold mb-6 text-white" data-aos="fade-up">
-          Pronta para esclarecer suas dúvidas com um atendimento jurídico
-          profissional e personalizado?
-        </h2>
-        <p
-          class="text-xl mb-8 text-gray-300"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Entre em contato agora mesmo:
-        </p>
-        <div
-          class="flex flex-col sm:flex-row justify-center gap-4"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <a
-            href="#"
-            class="bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover-scale soft-shadow"
-          >
-            <i class="fab fa-whatsapp mr-2"></i>Falar pelo WhatsApp
-          </a>
-          <a
-            href="#"
-            class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all hover-scale soft-shadow"
-          >
-            <i class="fas fa-phone mr-2"></i>Ligar agora
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="bg-black py-12 text-white">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-8">
-          <div class="mb-6 md:mb-0" data-aos="fade-up">
-            <h3 class="text-xl font-bold mb-2">Butzge Advogados Associados</h3>
-            <p class="text-gray-400">OAB-SC 58.793</p>
-          </div>
-
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div data-aos="fade-up" data-aos-delay="100">
-              <h4 class="text-gray-300 font-semibold mb-3">Contato</h4>
-              <ul class="space-y-2 text-gray-400">
-                <li class="flex items-center">
-                  <i class="fas fa-phone-alt mr-2 text-gray-300"></i>
-                  (47) XXXX-XXXX
-                </li>
-                <li class="flex items-center">
-                  <i class="fas fa-envelope mr-2 text-gray-300"></i>
-                  raissa58793@oab-sc.org.br
-                </li>
-              </ul>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="200">
-              <h4 class="text-gray-300 font-semibold mb-3">Redes Sociais</h4>
-              <div class="flex space-x-4 text-xl">
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-all"
-                >
-                  <i class="fab fa-whatsapp"></i>
-                </a>
-                <a
-                  href="https://linkedin.com/in/raissabutzge"
-                  class="text-gray-400 hover:text-white transition-all"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-all"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm" data-aos="fade-up">
+        <p>© 2025 Butzge Advogados. Todos os direitos reservados.</p>
+        <div class="mt-2 flex justify-center space-x-4">
+          <a class="hover:text-white transition-all" onclick="openModal('politica')">Política de privacidade</a>
+          <a class="hover:text-white transition-all" onclick="openModal('termos')">Termos de uso</a>
         </div>
 
-        <div
-          class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm"
-          data-aos="fade-up"
-        >
-          <p>© 2025 Butzge Advogados. Todos os direitos reservados.</p>
-          <div class="mt-2 flex justify-center space-x-4">
-            <a href="#" class="hover:text-white transition-all"
-              >Política de privacidade</a
-            >
-            <a href="#" class="hover:text-white transition-all"
-              >Termos de uso</a
-            >
-          </div>
-
-            <!-- Lumen -->
-          <div class="mt-4 flex justify-center">
-            <a href="" target="_blank" class="hover:opacity-80 transition-all">
+        <!-- Lumen -->
+        <div class="mt-4 flex justify-center">
+          <a href="" target="_blank" class="hover:opacity-80 transition-all">
             <img src="Imagens/Lumen.svg" alt="Lumen Digital" class="h-8">
-            </a>
-
-          
+          </a>
         </div>
       </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      // Inicializa AOS
-      AOS.init({
-        duration: 650, // duração da animação
-        offset: 100, // offset (em px) do ponto de ativação
-        easing: 'ease-in-out', // curva de easing
-        once: false // se a animação deve ocorrer apenas uma vez
-      });
+      <!-- Modal -->
+      <div id="modal" class="fixed hidden inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto border border-gray-800">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 id="modal-title" class="text-xl font-bold text-white"></h3>
+              <button onclick="closeModal()" class="text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div id="modal-content" class="text-gray-300">
+              <!-- O conteúdo será inserido dinamicamente pelo JavaScript -->
+            </div>
+            <div class="mt-6 flex justify-end">
+              <button onclick="closeModal()"
+                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors">
+                Fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      // Adiciona classe quando o scroll é feito
-      window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-          header.classList.add('shadow-md');
-          header.classList.add('bg-white');
-          header.classList.remove('shadow-sm');
-        } else {
-          header.classList.remove('shadow-md');
-          header.classList.add('shadow-sm');
+      <script>
+        function openModal(type) {
+          const modal = document.getElementById('modal');
+          const title = document.getElementById('modal-title');
+          const content = document.getElementById('modal-content');
+
+          if (type === 'politica') {
+            title.textContent = 'Política de Privacidade';
+            content.innerHTML = `
+        <p class="mb-4">A BUTZGE ADVOGADOS ASSOCIADOS assume o compromisso de garantir aos usuários dos seus serviços e produtos a privacidade, liberdade de acesso, qualidade, transparência, segurança e não discriminação, conforme as normas vigentes.</p>
+        <p class="mb-4">Esta Política de Privacidade se aplica aos usuários dos serviços e produtos disponibilizados pela advocacia BUTZGE ADVOGADOS, como também aos visitantes dos respectivos sites, e explica sobre a coleta, uso e compartilhamento dos dados pessoais.</p>
+        <p class="mb-6">Ao realizar o cadastro no website para utilizar os serviços e produtos da BUTZGE ADVOGADOS, o Usuário declara ter lido, compreendido e aceito todas as disposições desta Política de Privacidade, a qual complementa os Termos de Uso aceitos quando do seu cadastramento junto ao respectivo site.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">1. ENTENDENDO OS CONCEITOS-CHAVE</h4>
+        <p class="mb-2">1.1 Para tornar mais clara à compreensão desta Política de Privacidade, definem-se os seus principais conceitos:</p>
+        <p class="mb-1"><span class="font-medium">Dado Pessoal:</span> trata-se de qualquer informação relacionada à pessoa natural, direta ou indiretamente, identificada ou identificável, seja em meio digital ou físico.</p>
+        <p class="mb-1"><span class="font-medium">Titular do dado:</span> é a pessoa natural a quem se referem os dados pessoais.</p>
+        <p class="mb-1"><span class="font-medium">Tratamento:</span> refere-se a qualquer operação realizada com os dados pessoais, como por exemplo, a coleta, produção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência ou extração.</p>
+        <p class="mb-1"><span class="font-medium">Controlador:</span> é a pessoa a quem compete as decisões do tratamento dos dados pessoais, é quem determina o escopo do tratamento dos dados.</p>
+        <p class="mb-1"><span class="font-medium">Operador:</span> é a pessoa que realiza o tratamento dos dados pessoais em nome do controlador.</p>
+        <p class="mb-1"><span class="font-medium">Consentimento:</span> manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados pessoais para uma finalidade determinada.</p>
+        <p class="mb-1"><span class="font-medium">Anonimização:</span> trata-se do processo por meio do qual o dado perde a possibilidade de associação, direta ou indireta, a um indivíduo, considerados os meios técnicos razoáveis e disponíveis no momento do tratamento.</p>
+        <p class="mb-1"><span class="font-medium">Cookies:</span> são arquivos de internet que armazenam de forma temporária o que você está visitando na rede. São criados e enviados pelos websites ao seu computador sempre que você os visita.</p>
+        <p class="mb-4"><span class="font-medium">Violação de dados pessoais:</span> Acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, aquisição, uso, divulgação, comunicação ou qualquer forma de tratamento inadequado ou ilícito.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">2. AUTORIZAÇÃO</h4>
+        <p class="mb-2">2.1 Ao concordar com os Termos de Uso da BUTZGE ADVOGADOS, o Usuário também aceita esta Política de Privacidade, e consente com o tratamento dos seus dados pessoais, na forma e hipóteses aplicáveis.</p>
+        <p class="mb-4">2.2 O Usuário fica ciente de que as operações descritas nesta Política são indispensáveis para utilizar os serviços e produtos disponibilizados pela BUTZGE ADVOGADOS, sendo que a sua discordância em relação ao conteúdo deste documento impossibilitará o início ou a continuidade do uso desses serviços e produtos.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">3. QUAIS OS DADOS PESSOAIS PODERÃO SER COLETADOS?</h4>
+        <p class="mb-2">3.1 A BUTZGE ADVOGADOS, como controladora de dados, poderá coletar os seguintes dados pessoais:</p>
+        <p class="mb-1 font-medium">a) informados direta e livremente pelo titular:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>dados cadastrais: nome, gênero, filiação, data de nascimento, CPF, e/ou outros documentos de identificação, endereço, selfie, além do nome da advocacia e CNPJ em se tratando de pessoa jurídica;</li>
+          <li>dados de contato: telefones e e-mail;</li>
+          <li>dados bancários.</li>
+        </ul>
+        <p class="mb-1 font-medium">b) fornecidas e/ou coletadas de bases de dados de terceiros:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>dados sobre restrições financeiras, quais sejam: apontamentos negativos, restrições de crédito, restrições à constituição de garantia e valores devidos, se houver;</li>
+          <li>informações públicas sobre ações judiciais cíveis, criminais, trabalhistas;</li>
+          <li>dados sobre histórico de crédito;</li>
+          <li>pontuação gerada por advocacias especializadas em serviços de proteção ao crédito;</li>
+          <li>registros da base de dados do gateway de pagamento, mediante autorização do Usuário.</li>
+        </ul>
+        <p class="mb-1 font-medium">c) dados de navegação e do dispositivo coletados durante o uso do site BUTZGE ADVOGADOS:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>endereços IP de dispositivos;</li>
+          <li>interações realizadas e perfil de uso do Site e Blog;</li>
+          <li>tipo de conexão de rede do dispositivo;</li>
+          <li>cookies;</li>
+          <li>características do dispositivo, tais como modelo e sistema operacional e ID do DRM;</li>
+          <li>informações sobre geolocalização;</li>
+          <li>e-mail do Usuário logado;</li>
+          <li>interação do Usuário no aplicativo.</li>
+        </ul>
+        <p class="mb-1 font-medium">d) dados coletados a partir do uso do site da BUTZGE ADVOGADOS:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>dados de uso dos serviços e produtos;</li>
+          <li>dados de transações e movimentações na conta do Usuário;</li>
+          <li>histórico de atendimento ao Usuário.</li>
+        </ul>
+        <p class="mb-1 font-medium">e) dados públicos:</p>
+        <ul class="list-disc pl-5 mb-4">
+          <li>informações sobre o Usuário que estejam publicamente disponíveis;</li>
+          <li>informações sobre menções ou interações com a BUTZGE ADVOGADOS;</li>
+          <li>depoimentos relativos à BUTZGE ADVOGADOS publicados em redes sociais, acompanhadas do nome e imagem do Usuário.</li>
+        </ul>
+        <p class="mb-4">3.2 Ao utilizar o site BUTZGE ADVOGADOS, o Usuário se responsabiliza pelos dados pessoais e de terceiros publicados ou compartilhados, e confirma possuir o consentimento da parte terceira e/ou outra hipótese legal de tratamento para fornecê-los à advocacia.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">4. QUE OBJETIVOS E BASES LEGAIS A BUTZGE ADVOGADOS UTILIZA PARA TRATAR OS DADOS PESSOAIS?</h4>
+        <p class="mb-2">4.1 O tratamento de dados pessoais coletados pela BUTZGE ADVOGADOS é realizado em conformidade com padrões consistentes de segurança e confidencialidade.</p>
+        <p class="mb-2">4.2 Considerando o princípio da finalidade previsto na LGPD, a partir do qual o tratamento de dados pessoais deve atender a propósitos legítimos, específicos, explícitos e que devem ser informados ao Usuário, sem possibilidade de tratamento posterior de forma incompatível com essas finalidades, a BUTZGE ADVOGADOS poderá tratar os dados pessoais com os seguintes objetivos:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>disponibilização e prestação dos serviços e/ou produtos contratados;</li>
+          <li>identificação, autenticação e verificação da identidade e elegibilidade do Usuário para contratação dos serviços oferecidos pela BUTZGE ADVOGADOS;</li>
+          <li>manutenção do cadastro do Usuário atualizado ou cumprimento de obrigações legais e/ou regulatórias impostas a BUTZGE ADVOGADOS, incluindo normas de Conheça seu Cliente ("Know Your Customer"), prevenção à lavagem de dinheiro e financiamento ao terrorismo, dentre outras;</li>
+          <li>atendimento a solicitações e dúvidas;</li>
+          <li>contato via telefone, e-mail, SMS, WhatsApp, ou outros meios de comunicação, inclusive para envio de notificações ou push de uso dos serviços da BUTZGE ADVOGADOS;</li>
+          <li>autenticação de transações financeiras;</li>
+          <li>marketing, prospecção, promoção dos nossos produtos e serviços, incluindo envio de informações, novidades, funcionalidades, conteúdos, notícias e demais eventos relevantes para a manutenção do relacionamento com o Usuário;</li>
+          <li>aperfeiçoamento dos serviços prestados, inclusive para disponibilização de novos produtos e serviços;</li>
+          <li>prevenção e resolução de problemas técnicos ou de segurança;</li>
+          <li>colaboração ou cumprimento de ordem judicial emanada de autoridade competente ou de órgão fiscalizador;</li>
+          <li>para geração de estatísticas, estudos, pesquisas e levantamentos pertinentes às atividades e comportamento do Usuário no uso dos produtos e/ou serviços;</li>
+          <li>para execução de medidas de prevenção e combate a ilícitos, fraudes, crimes financeiros e garantia da segurança dos Usuários, da BUTZGE ADVOGADOS, e de terceiros.</li>
+        </ul>
+        <p class="mb-4">4.3 A BUTZGE ADVOGADOS poderá realizar o tratamento dos dados pessoais para as finalidades descritas no item anterior, respeitados os requisitos e condições estabelecidas pela legislação vigente, nas seguintes hipóteses:</p>
+        <ul class="list-disc pl-5 mb-4">
+          <li>para o cumprimento de obrigações legais e regulatórias;</li>
+          <li>quando necessário para a execução dos serviços e/ou entrega dos produtos contratados pelo Usuário e/ou procedimentos preliminares relacionados à contratação;</li>
+          <li>com base em interesses legítimos da BUTZGE ADVOGADOS, de acordo com as exigências e limites legais para essa modalidade de tratamento;</li>
+          <li>para a defesa de direitos da BUTZGE ADVOGADOS, inclusive em processos judiciais, administrativos ou arbitrais;</li>
+          <li>para análise e proteção ao crédito;</li>
+          <li>por meio da coleta de consentimento dos Usuários.</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">5. QUANDO OS DADOS PODERÃO SER COMPARTILHADOS?</h4>
+        <p class="mb-2">5.1 Os dados de natureza pessoal do Usuário somente poderão ser compartilhados pela BUTZGE ADVOGADOS com terceiros, nas hipóteses de:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>sucessão empresarial, a exemplo de fusão, aquisição e incorporação;</li>
+          <li>contratação de serviços de processamento de dados junto a terceiros (operadores), tais como hospedagem de dados, sistemas de processamento (serviços de computação em nuvem), consultoria em tecnologia da informação, serviços de telecomunicação, serviços de entrega, serviços de publicidade e marketing, organização de eventos, serviços de faturamento de créditos (financeiros);</li>
+          <li>atendimento às medidas de prevenção e combate à lavagem de dinheiro, financiamento ao terrorismo, e quaisquer outros ilícitos ou fraudes, bem como garantia da segurança dos usuários da BUTZGE ADVOGADOS e do sistema financeiro;</li>
+          <li>cumprimento à lei e aos regulamentos aos quais a BUTZGE ADVOGADOS está submetido;</li>
+          <li>com parceiros comerciais, prestadores de serviço, fornecedores e subcontratados para execução de serviços contratados;</li>
+          <li>mediante ordem judicial ou requerimento de autoridades competentes;</li>
+          <li>solicitação do Titular.</li>
+        </ul>
+        <p class="mb-2">5.2 A BUTZGE ADVOGADOS compromete-se a exigir compromisso de confidencialidade e de conformidade com os terceiros que terão acesso aos dados dos usuários, inclusive dos processadores diretos e indiretos dos dados que poderão estar fora do território brasileiro, o qual será reduzido a termo, por meio de em instrumento contratual ou em declaração específica com força obrigacional.</p>
+        <p class="mb-2">5.3 A BUTZGE ADVOGADOS informa ao Usuário que é obrigado por lei a compartilhar dados pessoais dos usuários em caso de exigência emanada de autoridade judicial, policial ou administrativa. A disponibilização destes dados se dará apenas mediante validação da ordem emitida junto aos órgãos competentes.</p>
+        <p class="mb-2">5.4 Na hipótese de ser realizado o compartilhamento de dados, este será realizado na medida necessária para atender a finalidade prevista e seguindo os padrões de segurança e confidencialidade, bem como as regulações e disposições de proteção à privacidade.</p>
+        <p class="mb-4">5.5 Os dados pessoais dos usuários também poderão ser compartilhados junto ao Conselho de Controle de Atividades Financeiras - COAF, como estabelece a Lei n. 9.613/1998, que dispõe sobre a prevenção de fraudes e crimes ao sistema financeiro.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">6. OS DADOS PODEM SER TRANSFERIDOS PARA OUTROS PAÍSES?</h4>
+        <p class="mb-4">6.1 Os dados pessoais dos usuários poderão ser transferidos e tratados fora do Brasil, como no caso de a BUTZGE ADVOGADOS armazená-los em provedores de computação em nuvem localizados em outros países, observadas as melhores práticas de segurança e privacidade para garantir a integridade dos dados pessoais, bem como, em conformidade com a legislação em vigor e demais normas regulamentares aplicáveis.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">7. COMO OS DADOS SÃO PROTEGIDOS?</h4>
+        <p class="mb-2">7.1 A BUTZGE ADVOGADOS, objetivando a proteção dos dados dos usuários e de terceiros armazenados, utilizar-se-á de medidas físicas e digitais de segurança, como controles de acessos, criptografia de informações, firewall, auditoria de alterações, dentre outros mecanismo como autenticação multi-fator, criptografia, controle de acesso e controle de permissões, adotando uma série de medidas técnicas e preventivas e utilização de boas práticas de segurança.</p>
+        <p class="mb-2">7.2 Os dados pessoais obtidos pela BUTZGE ADVOGADOS terão acesso restrito, com estrutura de segurança da informação aplicada a limitar o acesso de cada dado pessoal ao profissional ou setor que efetivamente os necessite para execução de algumas das finalidades declaradas do processamento de dados, sendo os procedimentos de segurança e acessos aos dados revisados periodicamente.</p>
+        <p class="mb-2">7.3 A BUTZGE ADVOGADOS realiza treinamentos dos colaboradores sobre segurança da informação e conscientização dos objetivos elencados nesta Política, assim como os colaboradores e terceiros que tenham acesso aos dados, se comprometem a seguir regras de privacidade, proteção de dados e confidencialidade, visando garantir a segurança das informações e o uso adequado dos dados.</p>
+        <p class="mb-2">7.4 A BUTZGE ADVOGADOS, mesmo comprometido com as melhores práticas da segurança da informação, não garantirá a impossibilidade de evento danoso decorrente de invasões hacker ou de incidentes de segurança pelo acesso a sites suspeitos e/ou instalação de software malicioso, ou ainda falhas e vícios, que cause a divulgação ou acesso indevido de informações. Em tal situação, nenhuma indenização por parte da BUTZGE ADVOGADOS será devida.</p>
+        <p class="mb-4">7.5 Ainda que a BUTZGE ADVOGADOS utilize diversas medidas visando a proteção e a segurança dos dados, o Usuário também é responsável pela segurança da sua conta BUTZGE ADVOGADOS, assim, deve manter seus dados seguros, protegendo suas senhas, login, chave criptográfica e demais informações sobre a sua conta, bem como deve acessar sua conta BUTZGE ADVOGADOS apenas de ambientes de conexão e equipamentos seguros e confiáveis.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">8. ATÉ QUANDO OS DADOS PODEM SER ARMAZENADOS?</h4>
+        <p class="mb-2">8.1 Enquanto o Usuário for um cliente ou cliente em prospecção da BUTZGE ADVOGADOS, para atender às finalidades descritas nesta Política de Privacidade, os seus dados pessoais poderão ser armazenados e mantidos de forma segura.</p>
+        <p class="mb-4">8.2 Quando aplicável, mesmo após o encerramento de sua conta BUTZGE ADVOGADOS, poderemos armazenar determinados dados do Usuário por um período adicional para fins de auditoria, cumprimento de obrigações legais e/ou regulatórias ou exercício regular de direitos, nos termos da legislação vigente aplicável.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">9. COMO FUNCIONAM OS COOKIES?</h4>
+        <p class="mb-2">9.1 A BUTZGE ADVOGADOS declara fazer uso de cookies para aprimorar a experiência de seus usuários em suas websites e páginas na Internet. Os cookies podem ser utilizados para lembrar o Usuário de suas preferências, persistir informações relacionadas a suas atividades no site visitado, ou coletar informações que podem ser usadas para oferecer conteúdo de uma forma personalizada.</p>
+        <p class="mb-2">9.2 A coleta e utilização de cookies ocorrerá durante a navegação em nosso Website, conforme preferências do usuário.</p>
+        <p class="mb-2">9.3 A BUTZGE ADVOGADOS faz uso de cookies para execução de:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li>autenticação e segurança;</li>
+          <li>oferta de anúncios e conteúdos relacionados a suas atividades;</li>
+          <li>oferta de produtos e serviços;</li>
+          <li>medição de desempenho e estatísticas.</li>
+        </ul>
+        <p class="mb-2">9.4 A BUTZGE ADVOGADOS assegura que tanto na execução de cookies próprios quanto de terceiros, as melhores práticas de segurança são adotadas para garantir a proteção dos dados pessoais levantados.</p>
+        <p class="mb-4">9.5 O uso dos cookies pela BUTZGE ADVOGADOS poderá ser previamente autorizado pelo Usuário quando de seu acesso às websites. As autorizações também poderão ser revisadas e modificadas a qualquer tempo pelo usuário. A BUTZGE ADVOGADOS esclarece que o bloqueio dos cookies poderá interferir no pleno uso dos recursos disponibilizados, inclusive inviabilizar o acesso a determinadas funções e ferramentas dos canais e website.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">10. QUAIS OS DIREITOS DO TITULAR DE DADOS PESSOAIS?</h4>
+        <p class="mb-2">10.1 Nas hipóteses em que atuar como Controlador dos dados pessoais dos seus usuários, a BUTZGE ADVOGADOS empregará todos os esforços para lhes garantir o exercício dos seus direitos, conforme a seguir elencados:</p>
+        <ul class="list-disc pl-5 mb-2">
+          <li><span class="font-medium">Informação e acesso:</span> o Usuário poderá solicitar a confirmação da existência de tratamentos dos seus dados pessoais, e acessá-los, caso haja o tratamento.</li>
+          <li><span class="font-medium">Correção:</span> o Usuário poderá requerer a correção de seus dados pessoais comprovadamente incompletos, inexatos ou desatualizados.</li>
+          <li><span class="font-medium">Anonimização, bloqueio ou eliminação:</span> poderá o Usuário pedir que seus dados tratados pela BUTZGE ADVOGADOS sejam anonimizados, bloqueados ou eliminados quando forem desnecessários, excessivos e/ou o seu tratamento estiver em desconformidade às normas vigentes.</li>
+          <li><span class="font-medium">Portabilidade:</span> o Usuário poderá solicitar a transferência dos seus dados pessoais a outro prestador de serviços.</li>
+          <li><span class="font-medium">Exclusão:</span> o Usuário tem o direito de requerer a exclusão dos seus dados pessoais que forem tratados mediante consentimento, e que não mais tenham relevância para a prestação dos serviços, com exceção da necessidade de manutenção de dados para cumprimento de dever legal ou regulatória e/ou exercício do direito de defesa em processo judicial e/ou administrativo.</li>
+          <li><span class="font-medium">Informação sobre o uso compartilhado:</span> o Usuário poderá pedir informações para a BUTZGE ADVOGADOS sobre o compartilhamento ou recebimento de seus dados pessoais.</li>
+          <li><span class="font-medium">Oposição:</span> o Usuário deverá ser informado sobre a possibilidade de não fornecer o consentimento e sobre as consequências dessa negativa.</li>
+          <li><span class="font-medium">Revogação:</span> caso o tratamento dos dados pessoais tenha se dado através de consentimento, o Usuário poderá revogar essa autorização mediante solicitação expressa.</li>
+          <li><span class="font-medium">Petição:</span> o Usuário poderá peticionar à Autoridade Nacional de Proteção de Dados (ANPD) em relação aos seus dados pessoais.</li>
+          <li><span class="font-medium">Revisão de decisões automatizadas:</span> poderá o Usuário solicitar a revisão de decisões tomadas unicamente com base em Tratamento automatizado de Dados Pessoais que o afetem.</li>
+        </ul>
+        <p class="mb-4">10.2 As solicitações dos usuários serão consideradas tendo em vista os objetivos e as bases legais apresentados, respeitados os direitos e liberdades individuais dos titulares quanto à proteção dos dados pessoais, motivo pelo qual as respostas aos requerimentos serão devidamente justificadas conforme o caso.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">11. A POLÍTICA DE PRIVACIDADE PODE SER ALTERADA?</h4>
+        <p class="mb-4">11.1 Esta Política de Privacidade poderá sofrer alterações, em virtude de modificações nas leis vigentes, necessidade de adequação tecnológica, mudanças ou inovação nos serviços ou produtos. Essas atualizações passarão a ser válidas, eficazes e vinculantes após serem publicadas no site da BUTZGE ADVOGADOS, ou comunicadas aos usuários por e-mail, via postal, ou qualquer outro meio eletrônico.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">12. QUAL A LEGISLAÇÃO E FORO APLICÁVEIS?</h4>
+        <p class="mb-2">12.1 Ao realizar o cadastro no website da BUTZGE ADVOGADOS, o Usuário está ciente de que são aplicáveis as normas brasileiras para reger a relação regulamentada nesta Política.</p>
+        <p class="mb-4">12.2 Toda e qualquer questão oriunda da presente Política de Privacidade será solucionada junto ao foro do município de Joinville/SC, com exclusão de qualquer outro por mais privilegiado que seja.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">13. COMO ENTRAR EM CONTATO COM A BUTZGE ADVOGADOS?</h4>
+        <p class="mb-4">13.1 Para esclarecimentos, dúvidas e solicitações de qualquer natureza relacionadas ao tratamento de dados pessoais e aos termos da presente Política de Privacidade, A BUTZGE ADVOGADOS coloca-se à disposição para contato através do seu encarregado de dados, Raissa Butzge, pelo e-mail raissa58793@oab-sc.org.br, ou canal de contato disponível na home, denominado "Proteção de Dados".</p>
+
+        <div class="border-t border-gray-700 pt-4 mt-6">
+          <p class="font-medium">BUTZGE ADVOGADOS ASSOCIADOS</p>
+          <p>Raissa Butzge</p>
+          <p>OAB/SC 58.793</p>
+        </div>
+      `;
+          } else if (type === 'termos') {
+            title.textContent = 'Termos de Uso';
+            content.innerHTML = `
+        <p class="mb-4">BUTZGE ADVOGADOS ASSOCIADOS, através desta Política de Cookies tem o objetivo de fornecer informações claras sobre o uso e função dos cookies no website BUTZGE ADVOGADOS, indicando quais são as diretrizes adotadas em respeito a privacidade de todos os usuários e/ou visitantes do site da BUTZGE ADVOGADOS, em complemento à nossa Política de Privacidade.</p>
+        <p class="mb-4">Ao acessar o nosso site, o usuário autoriza o uso de cookies de acordo com a presente Política. Caso não concorde com o uso de cookies na forma descrita, o usuário poderá ajustar as configurações de seu navegador para não permitir o seu uso.</p>
+        <p class="mb-6">Utilizamos cookies para personalizar sua experiência no site, além de coletar dados de comportamento para análises internas. Você pode configurar seu navegador para não aceitar cookies, mas isso pode afetar algumas funcionalidades do site.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">1. O QUE SÃO COOKIES</h4>
+        <p class="mb-2">1.1 Um cookie é um pequeno arquivo instalado por meio do navegador do usuário quando o website BUTZGE ADVOGADOS é acessado. Esse arquivo é armazenado no computador ou dispositivo móvel (como um smartphone ou tablet) e fica acessível a nossos servidores para coleta de informações que nos permitirão aprimorar a usabilidade e a experiência de navegação em nossos portais.</p>
+        <p class="mb-4">1.2 Os cookies atuam como um registro das atividades do usuário, e são atualizados todas as vezes em que o website for acessado, permitindo que este reconheça o usuário e lembre de informações importantes que tornam a utilização do nosso site mais agradável. Os cookies não coletam qualquer informação ou dado pessoal armazenados em dispositivo móvel ou computador.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">2. OBJETIVO DO USO DE COOKIES</h4>
+        <p class="mb-2">2.1 O objetivo da utilização de cookies no nosso website é fazer a distinção entre os usuários, personalizando o conteúdo e melhorando a experiência de acordo com as preferências do usuário.</p>
+        <p class="mb-2">2.2 Os cookies podem ser utilizados para tornar a interação entre o usuário e o site mais rápida e fácil, além de lembrar das preferências do usuário, informações relacionadas a suas atividades no site visitado, ou coletar informações que podem ser usadas para oferecer conteúdo ou comunicações diretas ou de marketing de uma forma personalizada.</p>
+        <p class="mb-4">2.3 Os cookies também são utilizados para analisar o desempenho do nosso website para que possamos fazer melhorias e torná-los mais fácil de usar, bem como para identificar o canal de origem do usuário.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">3. DADOS COLETADOS PELOS COOKIES</h4>
+        <p class="mb-2">3.1 Quando o usuário visita nossos websites, empregamos cookies para que possamos coletar automaticamente os seguintes dados:</p>
+        <p class="mb-1">(i) informações técnicas como o tipo de equipamento que você utiliza, o sistema operacional empregado, o navegador utilizado e o endereço de IP. Estes dados são empregados apenas para fins estatísticos e para aprimorar a experiência de navegação em nossos portais;</p>
+        <p class="mb-1">(ii) informações sobre a experiência de navegação em nosso website, como por exemplo as seções visitadas, produtos e serviços visualizados, o tempo de visualização, referência externas que o levaram a nosso website, etc. Estas informações são empregadas para que possamos aprimorar a estrutura de nossos portais e para eventual direcionamento de ofertas de nossos produtos e serviços;</p>
+        <p class="mb-4">(iii) informações sobre suas preferências pessoais, como idioma de navegação e país de origem, utilizado no propósito de adotar essas preferências como padrão a cada nova visita sua em nossos portais.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">4. FUNÇÕES DOS COOKIES</h4>
+        <p class="mb-2">4.1 Os cookies utilizados pela BUTZGE ADVOGADOS executam as seguintes funções:</p>
+        <p class="mb-1">(i) Cookies Necessários: São essenciais para o funcionamento correto do nosso site e para manter sua segurança. Esse tipo de cookie é definido para resposta a ações feitas pelo usuário, traduzindo-se em solicitação de serviços, como, por exemplo, definir suas preferências de privacidade, efetuar login ou preencher formulários.</p>
+        <p class="mb-1">(ii) Cookies Funcionais: Servem para lembrar das configurações e preferências feitas pelo usuário ou ajudar com outras funcionalidades durante a navegação no site.</p>
+        <p class="mb-4">(iii) Cookies de Terceiros: É possível a disponibilização de conteúdo de terceiros em nossos websites e portais, a exemplo de vídeos, imagens, artigos e pesquisas de serviços de mídia social como Instagram, Linkedin, Facebook, Medium, Youtube, Itunes, etc. Ao acessar o conteúdo desses provedores, é provável que cookies destes terceiros sejam instalados em seus dispositivos. A BUTZGE ADVOGADOS não possui ingerência ou controle sobre o uso, finalidade e funcionamento destes cookies. Recomendamos que busque conhecer a política de cookies desses provedores para mais informações.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">5. CONTROLE E RESTRIÇÃO DOS COOKIES</h4>
+        <p class="mb-2">5.1 O usuário tem o direito de escolher se deseja permitir o uso de cookies em seu dispositivo, as autorizações para coleta de cookies serão obtidas no primeiro acesso a nosso website e poderão ser alteradas de acordo com a sua preferência em seu navegador.</p>
+        <p class="mb-4">5.2 Pelo seu navegador, o usuário pode alterar suas preferências de cookies a qualquer momento, no entanto, ressaltamos que os cookies são uma parte importante do funcionamento dos nossos serviços, e o bloqueio de cookies poderá resultar na perda de funcionalidades ou restrição de acesso a seções de nosso website.</p>
+
+        <h4 class="text-lg font-semibold text-white mt-6 mb-2">6. INFORMAÇÕES ADICIONAIS</h4>
+        <p class="mb-2">6.1 Os termos desta Política poderão ser modificados a qualquer momento, em razão de alterações legislativas, em decorrência da atualização de ferramentas tecnológicas ou a critério da BUTZGE ADVOGADOS, por isso, recomendamos que sempre verifique a Política de Cookies vigente.</p>
+        <p class="mb-2">6.2 As informações coletadas serão sempre processadas em conformidade com esta Política e com a Política de Privacidade.</p>
+        <p class="mb-2">6.3 Esta Política é regida exclusivamente pelas Leis da República Federativa do Brasil.</p>
+        <p class="mb-4">6.4 Toda e qualquer questão oriunda desta Política será solucionada junto ao foro do município Joinville/SC, com exclusão de qualquer outro por mais privilegiado que seja.</p>
+
+        <p class="mb-6">Para maiores informações sobre os cookies e utilização de dados pela BUTZGE ADVOGADOS, leia a Política de Privacidade da BUTZGE ADVOGADOS.</p>
+
+        <div class="border-t border-gray-700 pt-4">
+          <p class="font-medium">BUTZGE ADVOGADOS ASSOCIADOS</p>
+          <p>Raissa Butzge</p>
+          <p>OAB/SC 58.793</p>
+        </div>
+      `;
+          }
+
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
         }
-      });
-    </script>
 
-    <script>
-      const botao = document.getElementById('menuCelular');
-      const menu = document.getElementById('menuMobile');
-      const fechar = document.getElementById('fecharMenu');
+        function closeModal() {
+          document.getElementById('modal').classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
 
-      // Abre o menu (remove o deslocamento para fora da tela à direita)
-      botao.addEventListener('click', () => {
-        menu.classList.remove('translate-x-full');
-      });
+        // Fechar modal ao clicar fora do conteúdo
+        window.addEventListener('click', function (event) {
+          const modal = document.getElementById('modal');
+          if (event.target === modal) {
+            closeModal();
+          }
+        });
+      </script>
+    </div>
+  </footer>
 
-      // Fecha o menu (adiciona o deslocamento para fora da tela à direita)
-      fechar.addEventListener('click', () => {
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Inicializa AOS
+    AOS.init({
+      duration: 650, // duração da animação
+      offset: 100, // offset (em px) do ponto de ativação
+      easing: 'ease-in-out', // curva de easing
+      once: false // se a animação deve ocorrer apenas uma vez
+    });
+
+    // Adiciona classe quando o scroll é feito
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+        header.classList.add('bg-white');
+        header.classList.remove('shadow-sm');
+      } else {
+        header.classList.remove('shadow-md');
+        header.classList.add('shadow-sm');
+      }
+    });
+  </script>
+
+  <script>
+    const botao = document.getElementById('menuCelular');
+    const menu = document.getElementById('menuMobile');
+    const fechar = document.getElementById('fecharMenu');
+
+    // Abre o menu (remove o deslocamento para fora da tela à direita)
+    botao.addEventListener('click', () => {
+      menu.classList.remove('translate-x-full');
+    });
+
+    // Fecha o menu (adiciona o deslocamento para fora da tela à direita)
+    fechar.addEventListener('click', () => {
+      menu.classList.add('translate-x-full');
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
         menu.classList.add('translate-x-full');
       });
+    });
+  </script>
+</body>
 
-      // Fecha o menu ao clicar em qualquer link
-      menu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          menu.classList.add('translate-x-full');
-        });
-      });
-    </script>
-  </body>
 </html>
